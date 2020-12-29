@@ -9,11 +9,15 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TabLayout tabLayout = findViewById(R.id.top_nav);
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.feed));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.request));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.users));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.watch));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.notify));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.more));
+
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView_item);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -79,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
         post1.setTextViewTitle("gameofthrones.com".toUpperCase());
         post1.setTextViewSubtitle("Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones");
         posts.add(post1);
+
+        Post post3 = new Post();
+        post3.setImageViewUser(R.drawable.sansa);
+        post3.setImageViewPost(R.drawable.post_3);
+        post3.setTextViewTime("45 min");
+        post3.setTextViewUsername("Sansa Stark");
+        post3.setTextViewContent("For years we’ve discovered the wonderfully complex world of Westeros and followed a medley of different stories, locations, and characters, but the heart of the series has always been with the Stark family.");
+        posts.add(post3);
 
         postAdapter.setPosts(posts);
         postAdapter.notifyDataSetChanged();
