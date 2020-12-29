@@ -83,8 +83,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_view_content"
         app:layout_constraintDimensionRatio="16:9"
-
         tools:srcCompat="@tools:sample/backgrounds/scenic"
         />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/image_view_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/ligthGray"
+        >
+        <TextView
+            android:id="@+id/text_view_post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            tools:text="VAGNER.BJ.ST"/>
+        <TextView
+            android:id="@+id/text_view_post_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            tools:text="@string/postSubtitle"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
