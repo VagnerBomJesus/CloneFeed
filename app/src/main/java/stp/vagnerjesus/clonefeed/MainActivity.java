@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     private PostAdapter postAdapter;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(postAdapter);
 
         List<Post> posts = new ArrayList<>();
+
+        Post post0 = new Post();
+
+        post0.setImageViewUser(R.drawable.user0);
+        post0.setImageViewPost(R.drawable.post0);
+        post0.setTextViewTime("2 min");
+        post0.setTextViewUsername("Carlos Espírito Santo");
+        post0.setTextViewContent("O tempo é precioso e viajar é preciso Irei, nem k seja pra perto.....");
+        post0.setTextViewTitle("YOUTUBE.COM".toUpperCase());
+        post0.setTextViewSubtitle("Algures em Lisboa Imagem feita com Xiaomi Yi");
+        posts.add(post0);
+
         Post post1 = new Post();
 
         post1.setImageViewUser(R.drawable.jon_snow);
