@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
         post0.setTextViewSubtitle("Algures em Lisboa Imagem feita com Xiaomi Yi");
         posts.add(post0);
 
+
+        Post post21 = new Post();
+        post21.setImageViewUser(R.drawable.vag);
+        post21.setImageViewPost(R.drawable.vagpost);
+        post21.setTextViewTime("25 de junho");
+        post21.setTextViewUsername("Vagner Bom Jesus");
+        post21.setTextViewContent("A reflexão, dispõe de diversas possibilidades e probabilidades quando feita.");
+        posts.add(post21);
+
         Post post2 = new Post();
         post2.setImageViewUser(R.drawable.red_queen);
         post2.setImageViewPost(R.drawable.post_2);
